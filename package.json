@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "commander": "^2.9.0",
+    "rx": "^4.1.0",
     "streamsplit": "^1.0.0"
   },
   "engines": {
