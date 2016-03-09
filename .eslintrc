@@ -1,0 +1,22 @@
+{
+  "extends": "./node_modules/eslint-config-airbnb/base.js",
+  "rules"  : {
+    "key-spacing"    : [
+      2,
+      {
+        "align": "colon",
+        "afterColon": true
+      }
+    ],
+    "no-multi-spaces": [
+      2,
+      {
+        "exceptions": {
+          "VariableDeclarator": true,
+          "AssignmentExpression": true
+        }
+      }
+    ],
+    "comma-dangle"   : [2,"never"]
+  }
+}
