@@ -4,9 +4,9 @@
 
 **mysqldumpsplit**. is a sysadmin utility that splits a single .sql file into several .sql files (one per table)
 
-The Module is written in ES6 transpiled using the wonderful Babel library. The 
+The Module is written in ES6 transpiled using the wonderful Babel library. 
 
-You can leverage the cli command or import it in your node project. Please take a look at `./src/cli.js` on how to use it within your node project.
+You can leverage the cli command or import it into your node project. Please take a look at `./src/cli.js` on how to use it within your node project.
 
 ## Requirements
 
@@ -24,7 +24,7 @@ You can leverage the cli command or import it in your node project. Please take 
 
 ## Performances
 
-Since the library processes the .sql file using node streams it can handle large files without fully loading it in memory.
+Since the library processes the .sql file using node streams, it can handle large files without fully loading it in memory.
 
 Using a pretty decent Laptop I was able to split a **180 tables, 16GB .sql** file in _under 2 minutes_ using _less than 50MB of RAM_.
 
