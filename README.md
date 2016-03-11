@@ -1,6 +1,12 @@
 # mysqldumpsplit
+[![Build Status via Travis CI](https://travis-ci.org/caolan/async.svg?branch=master)]()
 
-[![Travis](https://img.shields.io/travis/vekexasia/mysqldumpsplit.svg?style=flat-square)]() [![npm](https://img.shields.io/npm/l/mysqldumpsplit.svg?style=flat-square)]() [![npm](https://img.shields.io/npm/v/mysqldumpsplit.svg?style=flat-square)]() [![npm](https://img.shields.io/npm/dt/mysqldumpsplit.svg?style=flat-square)]() [![Coveralls](https://img.shields.io/coveralls/vekexasia/mysqldumpsplit.svg?style=flat-square)]() [![node](https://img.shields.io/node/v/mysqldumpsplit.svg?style=flat-square)]()
+[![Travis](https://img.shields.io/travis/vekexasia/mysqldumpsplit.svg?style=flat-square)](https://travis-ci.org/vekexasia/mysqldumpsplit) 
+[![npm](https://img.shields.io/npm/l/mysqldumpsplit.svg?style=flat-square)](https://www.npmjs.com/package/mysqldumpsplit) 
+[![npm](https://img.shields.io/npm/v/mysqldumpsplit.svg?style=flat-square)](https://www.npmjs.com/package/mysqldumpsplit) 
+[![npm](https://img.shields.io/npm/dt/mysqldumpsplit.svg?style=flat-square)](https://www.npmjs.com/package/mysqldumpsplit) 
+[![Coverage Status](https://img.shields.io/coveralls/vekexasia/mysqldumpsplit.svg?style=flat-square)](https://coveralls.io/github/vekexasia/mysqldumpsplit)
+[![node](https://img.shields.io/node/v/mysqldumpsplit.svg?style=flat-square)](https://www.npmjs.com/package/mysqldumpsplit)
 
 **mysqldumpsplit**. is a sysadmin utility that splits a single .sql file into several .sql files (one per table)
 

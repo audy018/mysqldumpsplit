@@ -105,4 +105,22 @@ describe('mysql.splitter', () => {
         }
       );
   });
+
+  it('should use a different path for output tables if given', done => {
+    const tableName = 'myTableName';
+    fileUtilsStub.readChunkOfFileToBuff = () => new Promise(resolve => resolve(new Buffer(`${splitToken} \`${tableName}\``)));
+    let called = false;
+    split('/tmp/lol.sql', '/out')
+      .subscribe(
+        n => {
+          called = true;
+          expect(n).to.be.equal(`/out/lol-${tableName}.sql`);
+        },
+        done,
+        () => {
+          expect(called).is.true;
+          done();
+        }
+      );
+  });
 });
