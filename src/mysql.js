@@ -2,7 +2,7 @@ import Splitter from 'streamsplit';
 import FileUtils from './FileUtils.class.js';
 import path from 'path';
 import fs from 'fs';
-import { Observable } from 'rx';
+import { Observable } from 'rxjs';
 
 const splitToken       = '\n--\n-- Table structure for table';
 const splitTokenLength = splitToken.length;
@@ -24,9 +24,9 @@ export default function (fullFilePath, outputPath = path.dirname(fullFilePath)) 
       .flatMap(chunk => {
         const matches = /for table `(.*?)`/.exec(chunk.toString('utf8'));
         if (matches !== null && matches.length > 0) {
-          return Observable.just(matches[1]);
+          return Observable.of(matches[1]);
         }
-        return Observable.just(`_unknown_${idx}`);
+        return Observable.of(`_unknown_${idx}`);
       })
       .flatMap(tableName => {
         const fileExt = path.extname(fullFilePath);

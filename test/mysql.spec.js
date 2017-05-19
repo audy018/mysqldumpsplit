@@ -2,7 +2,7 @@ import proxyquire from 'proxyquire';
 import { expect } from 'chai';
 import sinon from 'sinon';
 import streamBuffers from 'stream-buffers';
-import { Observable } from 'rx';
+import { Observable } from 'rxjs';
 
 /* eslint-env node, mocha */
 /* eslint-disable no-unused-expressions, no-new, max-len */
@@ -34,7 +34,7 @@ describe('mysql.splitter', () => {
   beforeEach(() => {
     fileUtilsStub.copyChunkOfFileToAnother = sinon.spy((a, b, c, d) => new Promise(resolve => resolve(d)));
     fileUtilsStub.readChunkOfFileToBuff    = sinon.spy((file, start, end) => new Promise(resolve => resolve(new Buffer(end - start))));
-    streamsplitStub.split                  = sinon.spy(() => Observable.just({ start: 1, end: 10 }));
+    streamsplitStub.split                  = sinon.spy(() => Observable.of({ start: 1, end: 10 }));
   });
   afterEach(() => {
     delete fileUtilsStub.copyChunkOfFileToAnother;

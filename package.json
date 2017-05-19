@@ -50,8 +50,8 @@
   },
   "dependencies": {
     "commander": "^2.9.0",
-    "rx": "^4.1.0",
-    "streamsplit": "^1.0.0"
+    "rxjs": "^5.4.0",
+    "streamsplit": "^2.0.0"
   },
   "engines": {
     "node": ">=0.12"
